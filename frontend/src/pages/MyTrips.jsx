@@ -1,25 +1,25 @@
 import React, { useEffect, useState } from 'react';
-import Navbar from '../components/NavBar';
+import Navbar from '../components/Navbar';
+import '../css/MyTrips.css';
 
 function MyTrips() {
-  const [trips, setTrips] = useState([]);
+  const [message, setMessage] = useState('Loading saved trips...');
 
   useEffect(() => {
-    const saved = JSON.parse(localStorage.getItem('itineraryArray')) || [];
-    setTrips(saved);
+    const itineraryArray = JSON.parse(localStorage.getItem('itineraryArray'));
+    if (!itineraryArray || itineraryArray.length === 0) {
+      setMessage('There are no saved trips.');
+    } else {
+      setMessage(itineraryArray.join(', '));
+    }
   }, []);
 
   return (
     <div>
       <Navbar />
-      <div style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '100vh',
-        fontSize: '20px'
-      }}>
-        {trips.length === 0 ? "There are no saved trips." : trips.join(', ')}
+      <div id="overlay"></div>
+      <div id="mytrips" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+        {message}
       </div>
     </div>
   );

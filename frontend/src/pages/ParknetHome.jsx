@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../components/NavBar';
+import Navbar from '../components/Navbar';
 import '../css/ParknetHome.css';
 
 function ParknetHome() {
@@ -12,15 +12,20 @@ function ParknetHome() {
       <Navbar />
       <div className="cropped-image"></div>
       <div className="itinerarytxt">
-        <span>Plan your </span>
-        <span style={{ color: '#008080' }}>itinerary</span>
-        <span> in minutes.</span>
+        <span>Plan your </span><span style={{ color: '#008080' }}>itinerary</span><span> in minutes.</span>
       </div>
-      <button className="startadventurebutton" onClick={redirectToItineraryStartPage}>
+      <button
+        type="button"
+        className="startadventurebutton"
+        onClick={redirectToItineraryStartPage}
+      >
         Start Adventure
       </button>
+
       <div style={{ textAlign: 'center', marginTop: '30px' }}>
-        <span style={{ display: 'inline-block', color: '#2F5429', fontSize: '20px' }}>Top Articles</span>
+        <span style={{ display: 'inline-block', color: '#2F5429', fontSize: '20px' }}>
+          Top Articles
+        </span>
         <div className="bottomHome">
           <img
             alt="ranked"
