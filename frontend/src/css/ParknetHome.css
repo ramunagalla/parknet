@@ -1,0 +1,30 @@
+.cropped-image {
+  background-image: url("/assets/image6.jpg");
+  background-size: cover;
+  max-width: 100vw;
+  height: 600px;
+  background-position: center top 600px;
+}
+
+.itinerarytxt {
+  position: absolute;
+  top: 225px;
+  left: 100px;
+  color: #FFA500;
+  font-size: 40px;
+  font-family: 'Kanit', sans-serif;
+  font-weight: bold;
+}
+
+.startadventurebutton {
+  background: linear-gradient(to right, #63C366, #27742A);
+  position: absolute;
+  top: 400px;
+  left: 230px;
+  color: #ffffff;
+  border-radius: 20px;
+  font-size: 30px;
+  font-family: 'Kanit', sans-serif;
+  cursor: pointer;
+  padding: 20px;
+}
